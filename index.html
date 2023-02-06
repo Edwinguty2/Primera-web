@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="utf-8">
+		<title> Segunda página web </title>
+	</head>
+	
+	<body>
+		<h1>1. Alertas y confirmaciones</h1>
+		<button>Boton básico</button>
+		<br> <br>
+	
+		<button onclick="accion_1()" id="Bt1">Botón 1</button>  <br> <br><!--Si le dan click, se acciona, y el id es como se identifica adentro!-->
+		<button onclick="accion_2()" id="Bt2">Botón 2</button>  <br> <br>
+		<button onclick="accion_3()" id="Bt3">Botón 3</button> <br><br><br>
+	
+		<h1>2. Despliegue de datos</h1>
+	
+		<p> Hola! a continuacón solicitaremos algunos datos personales, espernos mnos puedas colaborar con yu información. ¡Gracias! </p> <br>
+	
+		Primer nombre <input type="text" name="Recibir texto 1" id="Tx-1">
+	
+		Segundo nombre <input type="text" name="Recibir texto 2" id="Tx-2"> <br> <br>
+	
+		<p>Primer apellido <input type="text" name="Recibir texto 3" id="Tx-3"> </p>
+	
+		<p>Segundo apellidos <input type="text" name="Recibir texto 4" id="Tx-4"> </p>
+	
+		<button onclick="accion_4()" id="Bt4">Concatenar</button>
+		<br><br>
+	
+		Nombres completo: &nbsp;<output id="Out1"></output>
+	
+		<style type="text/css">
+			/* Esto es un comentario en CCS*/
+			body{/* Todo lo que este en el cuerpo de la pagina sera afectado, nada más*/
+					background-image: url(fondo.jpg); /* selecciona la imagen de fondo*/
+					background-repeat: space ; /* Como deseo que se vea*/
+					color: rgb(0, 0, 0);
+			}
+			h1{color: rgba(100, 100, 100, 1.0);}
+			h2{color: rgba(0, 0, 0, 1.0);}
+	
+			#Out1{color: rgba(66, 43, 233, 1.0);}
+	
+		</style>
+	
+		<script type="text/javascript">     
+	
+			function accion_1()
+			{
+				alert("Boton 1 Hola!!")
+			}
+			function accion_2()
+			{
+				confirm("Boton 2 Hola!!")
+			}
+			function accion_3()
+			{
+				alert("Boton 3 mensaje")
+				confirm("Boton 2 confirmación")
+			}
+			function accion_4()
+			{
+				var nombreCompleto= document.getElementById("Tx-1").value+" "+
+									document.getElementById("Tx-2").value+" "+
+									document.getElementById("Tx-3").value+" "+
+									document.getElementById("Tx-4").value
+				alert(nombreCompleto)
+
+				document.getElementById("Out1").innerHTML=nombreCompleto
+			}
+		</script>
+	
+	</body>
+	
+	</html>
+	
